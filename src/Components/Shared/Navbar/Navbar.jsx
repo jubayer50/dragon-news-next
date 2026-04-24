@@ -1,7 +1,21 @@
+import MyNavLink from "./MyNavLink";
+
 const Navbar = () => {
   return (
-    <div>
-      <h2 className="text-2xl">Navbar</h2>
+    <div className="max-w-285 mx-auto">
+      <nav>
+        <ul className="flex items-center gap-4">
+          <li>
+            <MyNavLink href={"/"}>Home</MyNavLink>
+          </li>
+          <li>
+            <MyNavLink href={"/about"}>About</MyNavLink>
+          </li>
+          <li>
+            <MyNavLink href={"/career"}>Career</MyNavLink>
+          </li>
+        </ul>
+      </nav>
     </div>
   );
 };
