@@ -8,7 +8,7 @@ const MyNavLink = ({ href, children, className }) => {
   return (
     <div>
       <Link
-        className={`text-[#706F6F] text-lg ${pathName === href ? "text-[#403F3F] font-semibold" : ""} ${className}`}
+        className={`text-[#706F6F] md:text-lg ${pathName === href ? "text-[#1a1a1a] font-semibold" : ""} ${className}`}
         href={href}
       >
         {children}
