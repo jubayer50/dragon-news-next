@@ -1,17 +1,6 @@
-import React from "react";
+import Link from "next/link";
 
-const getNewsCategoriesData = async () => {
-  const res = await fetch(
-    "https://openapi.programming-hero.com/api/news/categories",
-  );
-  const data = await res.json();
-  return data.data;
-};
-
-const AllCategories = async () => {
-  const news = await getNewsCategoriesData();
-  const newsCategories = news.news_category;
-  console.log(newsCategories, "new categories from cate. page");
+const AllCategories = async ({ newsCategories, activeId }) => {
   return (
     <div className="">
       <div className="text-center lg:text-left">
@@ -22,9 +11,14 @@ const AllCategories = async () => {
             {newsCategories.map((newsCategory) => (
               <li
                 key={newsCategory.category_id}
-                className="text-lg font-medium text-[#9F9F9F]"
+                className={`text-lg font-medium text-[#9F9F9F] ${activeId === newsCategory.category_id && "bg-[#E7E7E7] rounded-md"}`}
               >
-                {newsCategory.category_name}
+                <Link
+                  className="block  py-2 pl-6"
+                  href={`/categories/${newsCategory.category_id}`}
+                >
+                  {newsCategory.category_name}
+                </Link>
               </li>
             ))}
           </ul>
