@@ -10,8 +10,8 @@ const NewsDetailPage = async ({ params }) => {
   const newsDetails = await getNewsDetailById(id);
 
   return (
-    <div className="max-w-285 mx-auto my-12">
-      <div className="grid grid-cols-4 gap-5">
+    <div className="max-w-285 mx-auto my-12 px-2">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-5">
         <div className="col-span-1 md:col-span-3">
           <h2 className="text-[#403F3F] text-xl font-semibold">Dragon News</h2>
 
