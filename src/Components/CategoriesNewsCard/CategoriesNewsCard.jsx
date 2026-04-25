@@ -6,7 +6,6 @@ import { IoMdEye } from "react-icons/io";
 import { IoBookmarkOutline } from "react-icons/io5";
 
 const CategoriesNewsCard = ({ news }) => {
-  console.log(news);
   return (
     <div className="mt-5 border border-[#E7E7E7] rounded-md">
       {/* author */}
@@ -54,8 +53,8 @@ const CategoriesNewsCard = ({ news }) => {
 
         {/* description */}
         <div className="pb-5">
-          <p className="text-[#706F6F] line-clamp-3">{news.details}</p>
-          <Link href={"/news"}>
+          <p className="text-[#706F6F] line-clamp-2">{news.details}</p>
+          <Link href={`/news/${news._id}`}>
             <span className="text-[#FF8C47] font-semibold">See More...</span>
           </Link>
         </div>
