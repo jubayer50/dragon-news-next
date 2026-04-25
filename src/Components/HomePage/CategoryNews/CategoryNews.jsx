@@ -1,3 +1,5 @@
+import CategoriesNewsCard from "@/Components/CategoriesNewsCard/CategoriesNewsCard";
+
 const CategoryNews = ({ categoryNews }) => {
   return (
     <div>
@@ -9,7 +11,10 @@ const CategoryNews = ({ categoryNews }) => {
         <div>
           {categoryNews.length > 0 ? (
             categoryNews.map((category) => (
-              <h2 key={category._id}>{category.title}</h2>
+              <CategoriesNewsCard
+                key={category._id}
+                news={category}
+              ></CategoriesNewsCard>
             ))
           ) : (
             <h2 className="text-center text-lg font-medium mt-10">

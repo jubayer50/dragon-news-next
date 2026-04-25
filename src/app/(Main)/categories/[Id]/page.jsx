@@ -24,7 +24,7 @@ const NewsCategoryDetail = async ({ params }) => {
           ></AllCategories>
         </div>
 
-        <div className="col-span-1 lg:col-span-6 bg-purple-100">
+        <div className="col-span-1 lg:col-span-6">
           <CategoryNews categoryNews={categoryNews}></CategoryNews>
         </div>
 

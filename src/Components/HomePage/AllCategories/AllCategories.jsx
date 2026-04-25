@@ -7,7 +7,7 @@ const AllCategories = async ({ newsCategories, activeId }) => {
         <h2 className="text-[#403F3F] text-xl font-semibold">All Category</h2>
 
         <div className="mt-6">
-          <ul className="space-y-7.5">
+          <ul className=" space-y-3 md:space-y-4">
             {newsCategories.map((newsCategory) => (
               <li
                 key={newsCategory.category_id}
