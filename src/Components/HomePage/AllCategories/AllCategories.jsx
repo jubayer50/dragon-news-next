@@ -11,7 +11,7 @@ const AllCategories = async ({ newsCategories, activeId }) => {
             {newsCategories.map((newsCategory) => (
               <li
                 key={newsCategory.category_id}
-                className={`text-lg font-medium text-[#9F9F9F] ${activeId === newsCategory.category_id && "bg-[#E7E7E7] rounded-md"}`}
+                className={`text-lg font-medium text-[#9F9F9F] ${activeId === newsCategory.category_id && "bg-[#E7E7E7] text-[#403F3F] rounded-md"}`}
               >
                 <Link
                   className="block  py-2 pl-6"
