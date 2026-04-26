@@ -1,6 +1,7 @@
 import Image from "next/image";
 import MyNavLink from "./MyNavLink";
 import UserIcon from "@/assets/user.png";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -22,9 +23,11 @@ const Navbar = () => {
 
         <div className="flex items-center gap-3 md:gap-4">
           <Image src={UserIcon} alt="user" width={40} height={40}></Image>
-          <button className="btn bg-[#403F3F] text-white md:font-semibold md:text-lg">
-            Login
-          </button>
+          <Link href={"/signin"}>
+            <button className="btn bg-[#403F3F] text-white md:font-semibold md:text-lg">
+              Login
+            </button>
+          </Link>
         </div>
       </nav>
     </div>

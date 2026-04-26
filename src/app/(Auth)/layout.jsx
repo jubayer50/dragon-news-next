@@ -3,7 +3,7 @@ import React from "react";
 
 const AuthLayout = ({ children }) => {
   return (
-    <div>
+    <div className="bg-[#F3F3F3] py-5">
       <Navbar></Navbar>
 
       {children}
