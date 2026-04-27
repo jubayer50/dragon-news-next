@@ -14,7 +14,6 @@ const SignInPage = () => {
   } = useForm();
 
   const handleLoginBtn = async (data) => {
-    console.log(data);
     const { email, password } = data;
 
     const { data: authData, error } = await authClient.signIn.email({
