@@ -1,7 +1,15 @@
-import React from "react";
+"use client";
+
+import { authClient } from "@/lib/auth-client";
 import { FaGithub, FaGoogle } from "react-icons/fa";
 
 const Social = () => {
+  const handleLoginWithGoogle = async () => {
+    const data = await authClient.signIn.social({
+      provider: "google",
+    });
+  };
+
   return (
     <div>
       <div>
@@ -9,7 +17,10 @@ const Social = () => {
 
         <div className="mt-4 space-y-2">
           <div>
-            <button className="btn border border-[#403F3F80] bg-transparent gap-3 w-full">
+            <button
+              onClick={handleLoginWithGoogle}
+              className="btn border border-[#403F3F80] bg-transparent gap-3 w-full"
+            >
               <FaGoogle className="text-xl" /> Login with Google
             </button>
           </div>
