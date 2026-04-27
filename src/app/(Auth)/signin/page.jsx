@@ -22,6 +22,15 @@ const SignInPage = () => {
       rememberMe: false,
       callbackURL: "/",
     });
+
+    if (authData) {
+      alert("Signin successful!");
+    }
+
+    if (error) {
+      alert(error.message);
+      return;
+    }
   };
 
   const [showPassword, setShowPassword] = useState(false);
